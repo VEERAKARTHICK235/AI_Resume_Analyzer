@@ -1,0 +1,5 @@
+Django>=4.2
+xhtml2pdf>=0.2.11
+pytz
+sqlparse
+Pillow>=9.0.0
