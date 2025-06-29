@@ -1,5 +1,7 @@
 Django>=4.2
-xhtml2pdf>=0.2.11
-pytz
-sqlparse
-Pillow>=9.0.0
+gunicorn  # Production WSGI server for Render
+xhtml2pdf>=0.2.11  # For PDF generation
+pytz  # Timezone support (dependency of Django)
+sqlparse  # SQL parsing (dependency of Django)
+Pillow>=9.0.0  # Image handling, needed if your app ever works with images
+python-dotenv  # For loading environment variables from .env file
