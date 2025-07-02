@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ai-resume-analysis-result
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py makemigrations --noinput
+      python manage.py migrate --noinput
+    startCommand: gunicorn resume_analyzer.wsgi:application
+    autoDeploy: true
